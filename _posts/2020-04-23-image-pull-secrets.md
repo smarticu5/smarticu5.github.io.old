@@ -6,7 +6,7 @@ categories: [Kubernetes, Docker]
 
 # Image Pull Secrets
 
-Woo, first post! I've been looking more into container security lately and my friends and family are bored of hearing me talk about it, so I'm turning to a random internet audience now. More likely no one will read this, and I'll end up uisng it as self-reference.
+Woo, first post! I've been looking more into container security lately and my friends and family are bored of hearing me talk about it, so I'm turning to a random internet audience now. More likely no one will read this, and I'll end up using it as self-reference.
 
 Kubernetes clusters are used to run images. Sure, they do some fancy witchcraft to make them run in a distributed, high availability manner, but none of that matters if your cluster can't get your images from a registry somewhere. Normally, this is pretty simple. In a test cluster using [kind](https://github.com/kubernetes-sigs/kind), let's create a really basic manifest to deploy a pod.
 
@@ -112,4 +112,4 @@ myapp       1/1     Running   0          22s
 secretapp   1/1     Running   0          22s
 ```
 
-We've now been able to pull a private image from a repository, but everything so far has been running as a highly priviliged cluster-admin role. 
+We've now been able to pull a private image from a repository, but everything so far has been running as a highly priviliged cluster-admin role. Coming soon: how to make this play nicely with RBAC. 
