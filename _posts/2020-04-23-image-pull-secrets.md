@@ -8,7 +8,7 @@ categories: [Kubernetes, Docker]
 
 Woo, first post! I've been looking more into container security lately and my friends and family are bored of hearing me talk about it, so I'm turning to a random internet audience now. More likely no one will read this, and I'll end up uisng it as self-reference.
 
-Kubernetes clusters are used to run images. Sure, they do some fancy witchcraft to make them run in a distributed, high availability manner, but none of that matters if your cluster can't get your images from registry somewhere. Normally, this is pretty simple. In a test cluster using [kind](https://github.com/kubernetes-sigs/kind), let's create a really basic manifest to deploy a pod.
+Kubernetes clusters are used to run images. Sure, they do some fancy witchcraft to make them run in a distributed, high availability manner, but none of that matters if your cluster can't get your images from a registry somewhere. Normally, this is pretty simple. In a test cluster using [kind](https://github.com/kubernetes-sigs/kind), let's create a really basic manifest to deploy a pod.
 
 ```yaml
 apiVersion: v1
@@ -25,7 +25,7 @@ spec:
       - containerPort: 80
 ```
 
-Running `kubectl apply -f manifest.yaml`, the pod is created and I have a webserver running. 
+Running `kubectl apply -f manifest.yaml`, the pod is created and we have a webserver running. 
 
 ```bash
 ❯ kubectl get po
